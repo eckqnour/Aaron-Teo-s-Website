@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffd6;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header .logo img {
+            height: 60px;
+        }   
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 60px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .social-media a img {
+            height: 20px;
+            margin-left: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fdfaf6;
+        }
+
+        .intro h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            flex: 1 1 calc(25% - 20px);
+            box-sizing: border-box;
+            overflow: hidden;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item .caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+            padding: 15px;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 50%;
+            max-height: 50%;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="familyaaron.jpg" alt="Family logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="myweb.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <h4>Contact me:</h4>
+            <a href="https://x.com/?lang=en" target="_blank"><img src="x.png" alt="Twitter"></a>
+            <a href="https://www.facebook.com/login.php/" target="_blank"><img src="fb.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="ig.jpeg" alt="Instagram"></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>This is Aaron's Family!!</h2>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="familyaaron.jpg" alt="Image 1" onclick="openLightbox(this)">
+                <div class="caption">Full Family Picture</div>
+            </div>
+            <div class="gallery-item">
+                <img src="family1.jpg" alt="Image 2" onclick="openLightbox(this)">
+                <div class="caption">Chinese New Year Dinner</div>
+            </div>
+            <div class="gallery-item">
+                <img src="family2.jpg" alt="Image 3" onclick="openLightbox(this)">
+                <div class="caption">Family Dinner</div>
+            </div>
+        </section>
+     
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Large Image">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function openLightbox(element) {
+            document.getElementById('lightbox-img').src = element.src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+    
+    <footer>
+    <p>I hereby declare that the work in this assignment / project was carried out in accordance with the regulations of Universiti Teknologi MARA.</p>
+</footer>
+    
+</body>
+</html>

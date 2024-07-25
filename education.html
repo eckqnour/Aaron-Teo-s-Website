@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffd6;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header .logo img {
+            height: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 60px;
+        }
+        
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .social-media a img {
+            height: 20px;
+            margin-left: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .intro h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            flex: 1 1 calc(25% - 20px);
+            box-sizing: border-box;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 50%;
+            max-height: 50%;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .Education {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card-content {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="familyaaron.jpg" alt="Family logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="myweb.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <h4>Contact me:</h4>
+            <a href="https://x.com/?lang=en" target="_blank"><img src="x.png" alt="Twitter"></a>
+            <a href="https://www.facebook.com/login.php/" target="_blank"><img src="fb.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="ig.jpeg" alt="Instagram"></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="Education">
+            <h2>Aaron's Education</h2>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Sekolah Menengah Kebangsaan St.Joseph</h3>
+                    <img src="stjo.jpg" alt="Inclusive Future">
+                    <h4>Sijil Pelajaran Malaysia (SPM)<br>
+                    Jan 2017 - Nov 2019</h4>
+                    <p>Activities and societies: Malaysian Red Crescent Society (PBSM) Secretary, World Taekwondo Federation (WTF) Taekwondo Instructor, Student Council Member, Swimming Team Member, Drama Club Member, Chorus Speaking MemberActivities and societies: Malaysian Red Crescent Society (PBSM) Secretary, World Taekwondo Federation (WTF) Taekwondo Instructor, Student Council Member, Swimming Team Member, Drama Club Member, Chorus Speaking Member <br><br>
+                    Skills: Time & Attendance · Administrative Assistance · Self Defense · Drama · First Aid · First Aid Training · Cardiopulmonary Resuscitation (CPR) · Bandaging</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Sekolah Menengah Kebangsaan St.Joseph</h3>
+                    <h4>Sijil Tinggi Persekolahan Malaysia (STPM)<br>
+                    Aug 2020 - Apr 2022</h4>
+                    <img src="stjo.jpg" alt="Checklist">
+                    <p>Activities and societies: Class Representative, Project Manager for SMK St. Joseph Mill Hill's Restoration Project, Basketball Team Vice-President, Young Christian Students (YCS) Club MemberActivities and societies: Class Representative, Project Manager for SMK St. Joseph Mill Hill's Restoration Project, Basketball Team Vice-President, Young Christian Students (YCS) Club Member<br><br>
+                    Skills: Project Management · Sales Management · Leadership · Team Management · Project Planning</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Universiti Malaysia Sarawak (UNIMAS)</h3>
+                    <img src="unimas.jpg" alt="Update">
+                    <h4>Bachelor of Business Administration (Corporate Management) with Honours, Business Administration, Management and Operation<br>
+                    Oct 2022 - Oct 2025</h4>
+                    <p>Activities and societies: Head of Equipment Unit for Kpg. Pinang's Voluntary Program, Media & Information (MedSi) Liaison Officer, Society in Corporate Management (SICMA) Vice-Secretary, Kejohanan Sukan Mahasiswa Universiti Malaysia Sarawak (KESUMAS) Media Committee Member, We Care For 'U" Gifts & Souvenirs Committee Members, Class RepresentativeActivities and societies: Head of Equipment Unit for Kpg. Pinang's Voluntary Program, Media & Information (MedSi) Liaison Officer, Society in Corporate Management (SICMA) Vice-Secretary, Kejohanan Sukan Mahasiswa Universiti Malaysia Sarawak (KESUMAS) Media Committee Member, We Care For 'U" Gifts & Souvenirs Committee Members, Class Representative<br><br>
+                    Skills: Overseeing Projects · Volunteer Engagement · Logo Design · Volunteer Coordination · Graphic Design · Banner Designing · Hybrid Teamwork · Volunteer Leadership · People Management · Leadership Development · Project Planning</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function openLightbox(element) {
+            document.getElementById('lightbox-img').src = element.src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+    
+    <footer>
+    <p>I hereby declare that the work in this assignment / project was carried out in accordance with the regulations of Universiti Teknologi MARA.</p>
+</footer>
+
+</body>
+</html>
